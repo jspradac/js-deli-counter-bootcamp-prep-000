@@ -1,7 +1,10 @@
-function takeANumber(queue, name) {
-	queue.push(name);
-	return `Welcome, ${name}. You are number ${queue.length} in line.`;
+var nS = 0
+function takeANumber(queue) {
+	++nS
+	queue.push(nS);
+	return `Welcome. You are number ${nS}.`;
 }
+
 function nowServing(katzDeliLine) {
 	if (katzDeliLine.length > 0) {
 		return `Currently serving ${katzDeliLine.splice(0, 1)}.`;
